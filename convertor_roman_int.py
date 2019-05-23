@@ -15,7 +15,9 @@ def convert_roman_to_int(roman_num):
 
     reduce_letter = ["I", "X", "C"]
     other_letter = ["V", "L", "D"]
-    bad_combination = ["IM", "ID", "IC", "IL", "XD", "XM", "IXI", "XCX", "CMC"]
+    bad_combination = ["IM", "ID", "IC", "IL", "XD", "XM", "IXI", "XCX", "CMC",
+                       "XCL", "XCD", "XCM", "IXV", "VIX", "LXC", "IXL", "CMD",
+                       "IXC", "IXM", "DCM"]
     suma = 0
 
     if roman_num:
