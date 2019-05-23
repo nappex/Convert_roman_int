@@ -19,18 +19,22 @@ def convert_roman_to_int(roman_num):
     suma = 0
 
     if roman_num:
+        # Symbol in input is not for roman number
         for letter in roman_num:
             if letter not in (reduce_letter + other_letter + ["M"]):
                 raise ValueError
 
+        # symbol of roman number can not be more than 4 in input or 4 in line
         for letter in reduce_letter:
             if roman_num.count(letter) > 4 or 4 * letter in roman_num:
                 raise ValueError
 
+        #  V, L and D can be in roman num just 1 time
         for letter in other_letter:
             if roman_num.count(letter) > 1:
                 raise ValueError
 
+        # last symbol must not be higher than first one
         if len(roman_num) > 2\
                 and dict_roman[roman_num[-1]] > dict_roman[roman_num[0]]:
             raise ValueError
