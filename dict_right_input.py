@@ -3998,4 +3998,5 @@ right_input = {
                 3997: 'MMMCMXCVII',
                 3998: 'MMMCMXCVIII',
                 3999: 'MMMCMXCIX',
+                4000: 'MMMM',
                 }
