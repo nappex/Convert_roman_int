@@ -17,7 +17,8 @@ def convert_roman_to_int(roman_num):
     other_letter = ["V", "L", "D"]
     bad_combination = ["IM", "ID", "IC", "IL", "XD", "XM", "IXI", "XCX", "CMC",
                        "XCL", "XCD", "XCM", "IXV", "VIX", "LXC", "IXL", "CMD",
-                       "IXC", "IXM", "DCM"]
+                       "IXC", "IXM", "DCM", "IVI", "XLX", "CDC", "IXX", "IIV",
+                       "IIX", "XXL", "XXC", "XCC", "CCD", "CCM", "CMM"]
     suma = 0
 
     if roman_num:
@@ -47,6 +48,7 @@ def convert_roman_to_int(roman_num):
 
         for i, num in enumerate(roman_num):
             next_num = roman_num[(i + 1) % len(roman_num)]
+            # previous_num = roman_num[i - 1]
 
             if dict_roman[num] < dict_roman[next_num]\
                     and (i + 1) != len(roman_num)\
